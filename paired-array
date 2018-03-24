@@ -1,0 +1,26 @@
+function pairElement(str) {
+  var sequence = str.split("");
+  var matchedSequence = [];
+  for(var i = 0; i < sequence.length; i++){
+    var base = sequence[i];
+    switch(base){
+      case "A":
+        matchedSequence.push(["A","T"]);
+        break;
+      case "C":
+        matchedSequence.push(["C","G"]);
+        break;
+      case "G":
+        matchedSequence.push(["G","C"]);
+        break;
+      case "T":
+        matchedSequence.push(["T","A"]);
+        break;
+      default:
+        break;
+    }
+  }
+  return matchedSequence;
+}
+
+pairElement("GCG");
